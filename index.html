@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synapse Anesthesia</title>
+<meta name="description" content="Synapse Anesthesia provides anesthesia coverage for hospitals and outpatient facilities. Available for locum contracts and direct facility partnerships.">
+<meta property="og:title" content="Synapse Anesthesia">
+<meta property="og:description" content="CRNA anesthesia services — general surgery, regional nerve blocks, locum & contract coverage, and direct facility partnerships.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #3B82C4;
+    --teal: #2AB8A0;
+    --ink: #1a2730;
+    --slate: #4a5862;
+    --mute: #8595a0;
+    --paper: #fbfbf9;
+    --line: #e4e6e2;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .label {
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.7rem;
+    color: var(--mute);
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 2rem 6rem;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 75% 30%, rgba(255,255,255,0.16), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 1;
+  }
+  .hero .label { color: rgba(255,255,255,0.78); }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: #fff;
+    font-size: clamp(3.2rem, 9vw, 6rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 1.1rem 0 1.4rem;
+  }
+  .hero .tagline {
+    color: rgba(255,255,255,0.92);
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+    max-width: 30ch;
+    font-weight: 400;
+    margin-bottom: 2.6rem;
+  }
+  .btn {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.18); }
+
+  /* PRACTICE STATEMENT */
+  .statement {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4.5rem;
+  }
+  .statement .founder { margin-bottom: 2rem; }
+  .statement p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3.4vw, 2.05rem);
+    line-height: 1.4;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  /* SERVICES */
+  .services {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem;
+  }
+  .services .label { display: block; margin-bottom: 2rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .card {
+    background: var(--card);
+    padding: 2.4rem 2rem;
+    transition: background 0.3s ease;
+  }
+  .card:hover { background: #fff; }
+  .card .num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--teal);
+    letter-spacing: 0.1em;
+  }
+  .card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin: 0.6rem 0 0.5rem;
+    line-height: 1.15;
+  }
+  .card p { color: var(--slate); font-size: 0.95rem; }
+
+  /* CONTACT */
+  .contact {
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 5.5rem 2rem 5rem;
+  }
+  .contact .label { display: block; margin-bottom: 1.4rem; }
+  .contact a.email {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.1em;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+  .contact a.email:hover { color: var(--blue); border-color: var(--blue); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2.4rem 2rem;
+    text-align: center;
+  }
+  footer .label { color: var(--mute); }
+
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero { min-height: 70vh; padding: 6rem 1.5rem 4rem; }
+    .statement { padding: 4.5rem 1.5rem 3.5rem; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="label">CRNA Anesthesia Services</span>
+      <h1>Synapse<br>Anesthesia</h1>
+      <p class="tagline">Anesthesia coverage for hospitals and outpatient facilities.</p>
+      <a class="btn" href="mailto:clewis@synapseanesthesia.org">Get in touch</a>
+    </div>
+  </section>
+
+  <section class="statement">
+    <p class="founder label" style="font-size:0.7rem; letter-spacing:0.18em;">Founded by Charnelle Lewis, DNP, CRNA</p>
+    <p>We provide anesthesia coverage for hospitals and outpatient facilities. We're available for locum contracts and direct facility partnerships.</p>
+  </section>
+
+  <section class="services">
+    <span class="label">What we cover</span>
+    <div class="grid">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>General Surgery</h3>
+        <p>Anesthesia for inpatient and outpatient surgical cases.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Regional Nerve Blocks</h3>
+        <p>Upper and lower extremity regional anesthesia to support multimodal pain management.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Locum &amp; Contract Coverage</h3>
+        <p>Reliable short- and full-term contract coverage, available across multiple states.</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <h3>Direct Facility Partnerships</h3>
+        <p>Ongoing anesthesia partnerships with surgery centers and facilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <span class="label">Inquiries &amp; coverage requests</span>
+    <a class="email" href="mailto:clewis@synapseanesthesia.org">clewis@synapseanesthesia.org</a>
+  </section>
+
+  <footer>
+    <span class="label">Synapse Anesthesia · Charnelle Lewis, DNP, CRNA</span>
+  </footer>
+
+</body>
+</html>
